@@ -324,27 +324,27 @@ echo -ne "\033[1;32mWHAT DO YOU WANT TO DO \033[1;33m?\033[1;31m?\033[1;37m : ";
 case "$x" in 
    1 | 01)
    clear
-   criarusuario
+   เพิ่มบัญชี openvpn
    echo -ne "\n\033[1;31mENTER \033[1;33to return to \033[1;32mMENU!\033[0m"; read
    ;;
    2 | 02)
    clear
-   criarteste
+   สร้างยูสเซอร์ทดสอบ
    echo -ne "\n\033[1;31mENTER \033[1;33to return to \033[1;32mMENU!\033[0m"; read
    ;;
    3 | 03)
    clear
-   remover
+   ลบบัญชีผู้ใช้
    sleep 3
    ;;
    4 | 04)
    clear
-   sshmonitor
+   บัญชีกำลังใช้งาน
    echo -ne "\n\033[1;31mENTER \033[1;33mවto return to \033[1;32mMENU!\033[0m"; read
    ;;      
    5 | 05)
    clear
-   mudardata
+   เปลี่ยนวันหมดอายุ
    sleep 3
    ;;
    6 | 06)
@@ -365,16 +365,16 @@ case "$x" in
    ;;     
    9 | 09)
    clear
-   infousers
+   ยูสเซอร์ทั้งหมด
    echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
    ;;
    10)
-   conexao
+   ตั้งค่าพอร์ทต่างๆ
    exit;
    ;;
    11)
    clear
-   velocity
+   เช็คสปีดเน็ต
    echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
    ;;
    12)
