@@ -223,57 +223,57 @@ echo -ne "\033[1;32mOQUE DESEJA FAZER \033[1;33m?\033[1;31m?\033[1;37m : "; read
 case "$x" in 
    1 | 01)
    clear
-   สร้างบัญชีผู้ใช้ openvpn
+   criarusuario
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    2 | 02)
    clear
-   สร้างบัญชี ทดสอบ
+   criarteste
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    3 | 03)
    clear
-   ลบบัญชีผู้ใช้
+   remover
    sleep 3
    ;;
    4 | 04)
    clear
-   สถานะผู้ใช้งาน
+   sshmonitor
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;      
    5 | 05)
    clear
-   เปลี่ยนวันหมดอายุ
+   mudardata
    sleep 3
    ;;
    6 | 06)
    clear
-   ตั้งลีมิตการใช้งาน
+   alterarlimite
    sleep 3
    ;; 
    7 | 07)
    clear
-   เปลี่ยนรหัสผ่านผู้ใช้งาน
+   alterarsenha
    sleep 3
    ;;
    8 | 08)
    clear
-   ลบบัญชีผู้ใช้ที่หมดอายุ
+   expcleaner
    echo ""
    sleep 3
    ;;     
    9 | 09)
    clear
-   รายละเอียดผู้ใช้ที้งหมด
+   infousers
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    10)
-   ตั้งค่าพอร์ทsqutie openvpn
+   conexao
    exit;
    ;;
    11)
    clear
-   ทดสอบสปีดเน็ต
+   velocity
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    12)
@@ -285,7 +285,7 @@ case "$x" in
    clear
    echo -e "\033[1;32mPARA SAIR CLICK CTRL + C\033[1;36m"
    sleep 4
-   กราฟฟิกการใช้งาน
+   nload
    ;;
    14)
    clear
@@ -293,11 +293,11 @@ case "$x" in
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    15)
-   แบ็คอัพข้อมูลผู้ใช้งาน
+   userbackup
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
    16)
-   ตั้งค่าลีมิตการใช้งาน
+   limit_ssh
    ;;
    17)
    clear
@@ -324,19 +324,19 @@ case "$x" in
    ;;
    23)
    clear
-   เพิ่มโฮส
+   addhost
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    menu
    ;;
    24)
    clear
-   ลบโฮส
+   delhost
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    menu
    ;;
    25)
    clear
-   เปลี่ยนรหัสผ่าน root
+   senharoot
    sleep 3
    ;;
    26)
