@@ -62,7 +62,7 @@ fun_tst () {
 speedtest --share > speed
 }
 echo ""
-echo -e "   \033[1;32mบอลอินเตอร์เน็ต!\033[0m"
+echo -e "   \033[1;32mසේවාදායකයාගේ වේගය පරීක්ෂා කිරීම!\033[0m"
 echo ""
 aguarde 'fun_tst'
 echo ""
@@ -324,27 +324,27 @@ echo -ne "\033[1;32mWHAT DO YOU WANT TO DO \033[1;33m?\033[1;31m?\033[1;37m : ";
 case "$x" in 
    1 | 01)
    clear
-   เพิ่มบัญชี openvpn
+   criarusuario
    echo -ne "\n\033[1;31mENTER \033[1;33to return to \033[1;32mMENU!\033[0m"; read
    ;;
    2 | 02)
    clear
-   สร้างยูสเซอร์ทดสอบ
+   criarteste
    echo -ne "\n\033[1;31mENTER \033[1;33to return to \033[1;32mMENU!\033[0m"; read
    ;;
    3 | 03)
    clear
-   ลบบัญชีผู้ใช้
+   remover
    sleep 3
    ;;
    4 | 04)
    clear
-   บัญชีกำลังใช้งาน
+   sshmonitor
    echo -ne "\n\033[1;31mENTER \033[1;33mවto return to \033[1;32mMENU!\033[0m"; read
    ;;      
    5 | 05)
    clear
-   เปลี่ยนวันหมดอายุ
+   mudardata
    sleep 3
    ;;
    6 | 06)
@@ -354,27 +354,27 @@ case "$x" in
    ;; 
    7 | 07)
    clear
-   เปลี่ยนรหัสผ่าน
+   alterarsenha
    sleep 3
    ;;
    8 | 08)
    clear
-   ลบบัญชีที่หมดอายุ
+   expcleaner
    echo ""
    sleep 3
    ;;     
    9 | 09)
    clear
-   ยูสเซอร์ทั้งหมด
+   infousers
    echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
    ;;
    10)
-   ตั้งค่าพอร์ทต่างๆ
+   conexao
    exit;
    ;;
    11)
    clear
-   เช็คสปีดเน็ต
+   velocity
    echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
    ;;
    12)
