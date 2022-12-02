@@ -62,7 +62,7 @@ fun_tst () {
 speedtest --share > speed
 }
 echo ""
-echo -e "   \033[1;32mසේවාදායකයාගේ වේගය පරීක්ෂා කිරීම!\033[0m"
+echo -e "   \033[1;32mบอลอินเตอร์เน็ต!\033[0m"
 echo ""
 aguarde 'fun_tst'
 echo ""
@@ -354,12 +354,12 @@ case "$x" in
    ;; 
    7 | 07)
    clear
-   alterarsenha
+   เปลี่ยนรหัสผ่าน
    sleep 3
    ;;
    8 | 08)
    clear
-   expcleaner
+   ลบบัญชีที่หมดอายุ
    echo ""
    sleep 3
    ;;     
