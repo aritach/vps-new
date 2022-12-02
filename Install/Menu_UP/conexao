@@ -1014,7 +1014,7 @@
 				fun_conexao
 			}
 			echo ""
-			read -p "$(echo -e "\033[1;32mQUAL PORTA DESEJA UTILIZAR? \033[1;37m")" -e -i 1194 porta
+			read -p "$(echo -e "\033[1;32mQUAL PORTA DESEJA UTILIZAR? \033[1;37m")" -e -i 443 porta
 			[[ -z "$porta" ]] && {
 				echo ""
 				echo -e "\033[1;31mPorta invalida!"
@@ -1223,16 +1223,17 @@ exit 0' >$RCLOCAL
 			fi
 			[[ $(grep -wc 'open.py' /etc/autostart) != '0' ]] && pt_proxy=$(grep -w 'open.py' /etc/autostart| cut -d' ' -f6) || pt_proxy=80
 			cat <<-EOF >/etc/openvpn/client-common.txt
-				# OVPN_ACCESS_SERVER_PROFILE=[DARKSSH]
+				# OVPN_ACCESS_SERVER_PROFILE=[บอล]
 				client
 				dev tun
 				proto $PROTOCOL
 				sndbuf 0
 				rcvbuf 0
-				remote 127.0.0.1 2222
-				route $IP 255.255.255.255 net_gateway
-				#MODO SLOWDNS, UTILIZE O APP OPENVPN PARA ANDROID, SELECIONE O TERMUX EM APLICAÇÕES PERMITIDAS
-				resolv-retry 5
+				remote $IP 999 udp
+				remote 127.0.0.1 443 tcp-client
+				http-proxy $IP 8080
+				http-proxy-option CUSTOM-HEADER Host www.opensignal.com
+	                        resolv-retry 5
 				nobind
 				persist-key
 				persist-tun
