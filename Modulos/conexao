@@ -97,7 +97,7 @@
 			echo -e "\n\033[1;33mWHICH PORTS DO YOU WANT TO USE IN THE SQUID \033[1;31m?"
 			echo -e "\n\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mSET THE PORTS IN SEQUENCE \033[1;33mEX: \033[1;37m80 8080"
 			echo ""
-			echo -ne "\033[1;32mINFORM THE PORTS\033[1;37m: "
+			echo -ne "\033[1;32mINFORM THE PORTS\033[1;37m: " -e -i 8080 porta
 			read portass
 			[[ -z "$portass" ]] && {
 				echo -e "\n\033[1;31mInvalid port!"
