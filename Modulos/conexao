@@ -669,12 +669,12 @@
 				echo ""
 				echo -e "\033[1;33mPORTA\033[1;37m: \033[1;32m$opnp"
 				echo ""
-				echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mALTERAR PORTA"
-				echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mREMOVER OPENVPN"
-				echo -e "\033[1;31m[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mOVPN VIA LINK $ovpnweb"
-				echo -e "\033[1;31m[\033[1;36m4\033[1;31m] \033[1;37m• \033[1;33mMULTILOGIN OVPN $mult"
-				echo -e "\033[1;31m[\033[1;36m5\033[1;31m] \033[1;37m• \033[1;33mALTERAR HOST DNS"
-				echo -e "\033[1;31m[\033[1;36m0\033[1;31m] \033[1;37m• \033[1;33mVOLTAR"
+				echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mเปลี่ยนพอร์ท openvpn"
+				echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mถอนการติดตั้ง OPENVPN"
+				echo -e "\033[1;31m[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mสร้างไฟล์ดาวน์โหลด $ovpnweb"
+				echo -e "\033[1;31m[\033[1;36m4\033[1;31m] \033[1;37m• \033[1;33mเปิด-ปิด การเชื่อมต่อได้หลายเครื่อง $mult"
+				echo -e "\033[1;31m[\033[1;36m5\033[1;31m] \033[1;37m• \033[1;33mแก้ไขโฮส DNS"
+				echo -e "\033[1;31m[\033[1;36m0\033[1;31m] \033[1;37m• \033[1;33mออกจากหน้านี้"
 				echo ""
 				echo -ne "\033[1;32mOQUE DESEJA FAZER \033[1;33m?\033[1;31m?\033[1;37m "
 				read option
@@ -755,11 +755,11 @@
 							rm -rf /usr/share/doc/openvpn*
 						}
 						echo ""
-						echo -e "\033[1;32mREMOVENDO O OPENVPN!\033[0m"
+						echo -e "\033[1;32mถอนติดตั้ง openvpn!\033[0m"
 						echo ""
 						fun_bar 'rmv_open'
 						echo ""
-						echo -e "\033[1;32mOPENVPN REMOVIDO COM SUCESSO!\033[0m"
+						echo -e "\033[1;32mถอนติดตั้ง openvpn เรียบร้อยแล้ว!\033[0m"
 						sleep 2
 						fun_conexao
 					} || {
@@ -789,7 +789,7 @@
 								done
 								tput cnorm
 							}
-							echo -ne "\033[1;31mDESATIVANDO\033[1;32m.\033[1;33m.\033[1;31m. \033[1;33m"
+							echo -ne "\033[1;31mกำลังปิด\033[1;32m.\033[1;33m.\033[1;31m. \033[1;33m"
 							helice
 							echo -e "\e[1DOk"
 						}
@@ -824,7 +824,7 @@
 								done
 								tput cnorm
 							}
-							echo -ne "\033[1;32mATIVANDO\033[1;32m.\033[1;33m.\033[1;31m. \033[1;33m"
+							echo -ne "\033[1;32mกำลังเปิด\033[1;32m.\033[1;33m.\033[1;31m. \033[1;33m"
 							helice
 							echo -e "\e[1DOk"
 						}
@@ -854,7 +854,7 @@
 								tput cnorm
 							}
 							echo ""
-							echo -ne "\033[1;31mBLOQUEANDO MULTILOGIN\033[1;32m.\033[1;33m.\033[1;31m. \033[1;33m"
+							echo -ne "\033[1;31mปิดล็อกอินหลายเครื่อง\033[1;32m.\033[1;33m.\033[1;31m. \033[1;33m"
 							helice
 							echo -e "\e[1DOk"
 						}
@@ -882,7 +882,7 @@
 								tput cnorm
 							}
 							echo ""
-							echo -ne "\033[1;32mPERMITINDO MULTILOGIN\033[1;32m.\033[1;33m.\033[1;31m. \033[1;33m"
+							echo -ne "\033[1;32mเปิดล็อกอินหลายเครื่อง\033[1;32m.\033[1;33m.\033[1;31m. \033[1;33m"
 							helice
 							echo -e "\e[1DOk"
 						}
@@ -1002,31 +1002,31 @@
 			done
 		} || {
 			clear
-			echo -e "\E[44;1;37m              INSTALADOR OPENVPN               \E[0m"
+			echo -e "\E[44;1;37m              ติดตั้ง OPENVPN               \E[0m"
 			echo ""
-			echo -e "\033[1;33mRESPONDA AS QUESTOES PARA INICIAR A INSTALACAO"
+			echo -e "\033[1;33mใส่ค่าต่างๆ เพื่อทำการติดตั้ง"
 			echo ""
-			echo -ne "\033[1;32mPARA CONTINUAR CONFIRME SEU IP: \033[1;37m"
+			echo -ne "\033[1;32mยืนยันไอพี: \033[1;37m"
 			read -e -i $IP IP
 			[[ -z "$IP" ]] && {
 				echo ""
-				echo -e "\033[1;31mIP invalido!"
+				echo -e "\033[1;31mIP ไม่ถูกต้อง!"
 				sleep 3
 				fun_conexao
 			}
 			echo ""
-			read -p "$(echo -e "\033[1;32mQUAL PORTA DESEJA UTILIZAR? \033[1;37m")" -e -i 443 porta
+			read -p "$(echo -e "\033[1;32mพอร์ท ที่ต้องการใช้? \033[1;37m")" -e -i 443 porta
 			[[ -z "$porta" ]] && {
 				echo ""
-				echo -e "\033[1;31mPorta invalida!"
+				echo -e "\033[1;31mPorta ไม่ถูกต้อง!"
 				sleep 2
 				fun_conexao
 			}
 			echo ""
-			echo -e "\033[1;33mVERIFICANDO PORTA..."
+			echo -e "\033[1;33mกำลังตรวจสอบ พอร์ท..."
 			verif_ptrs $porta
 			echo ""
-			echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;33mSistema"
+			echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;33mระบบของเซิฟเวอร์โดยตรง"
 			echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;33mGoogle (\033[1;32mRecomendado\033[1;33m)"
 			echo -e "\033[1;31m[\033[1;36m3\033[1;31m] \033[1;33mOpenDNS"
 			echo -e "\033[1;31m[\033[1;36m4\033[1;31m] \033[1;33mCloudflare"
@@ -1034,12 +1034,12 @@
 			echo -e "\033[1;31m[\033[1;36m6\033[1;31m] \033[1;33mVerisign"
 			echo -e "\033[1;31m[\033[1;36m7\033[1;31m] \033[1;33mDNS Performace\033[0m"
 			echo ""
-			read -p "$(echo -e "\033[1;32mQUAL DNS DESEJA UTILIZAR? \033[1;37m")" -e -i 1 DNS
+			read -p "$(echo -e "\033[1;32mต้องการใช้ dns ได? \033[1;37m")" -e -i 1 DNS
 			echo ""
 			echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;33mUDP"
-			echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;33mTCP (\033[1;32mRecomendado\033[1;33m)"
+			echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;33mTCP (\033[1;32mแนะนำ\033[1;33m)"
 			echo ""
-			read -p "$(echo -e "\033[1;32mQUAL PROTOCOLO DESEJA UTILIZAR NO OPENVPN? \033[1;37m")" -e -i 2 resp
+			read -p "$(echo -e "\033[1;32mเลือก โปรโตคอล? \033[1;37m")" -e -i 2 resp
 			if [[ "$resp" = '1' ]]; then
 				PROTOCOL=udp
 			elif [[ "$resp" = '2' ]]; then
@@ -1049,14 +1049,14 @@
 			fi
 			echo ""
 			[[ "$OS" = 'debian' ]] && {
-				echo -e "\033[1;32mATUALIZANDO O SISTEMA"
+				echo -e "\033[1;32mอัพเดท ระบบ"
 				echo ""
 				fun_attos() {
 					apt-get update-y
 				}
 				fun_bar 'fun_attos'
 				echo ""
-				echo -e "\033[1;32mINSTALANDO DEPENDENCIAS"
+				echo -e "\033[1;32mติดตั้ง ต่างๆ"
 				echo ""
 				fun_instdep() {
 					apt-get install openvpn iptables openssl ca-certificates -y
