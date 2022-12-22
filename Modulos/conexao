@@ -94,10 +94,10 @@
 				echo ""
 				read -p "Enter your IP: " IP
 			}
-			echo -e "\n\033[1;33mWHICH PORTS DO YOU WANT TO USE IN THE SQUID \033[1;31m?"
-			echo -e "\n\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mSET THE PORTS IN SEQUENCE \033[1;33mEX: \033[1;37m80 8080"
+			echo -e "\n\033[1;33mต้องการใช้พอร์ทได เพื่อ SQUID \033[1;31m?"
+			echo -e "\n\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mตั้งค่าพอร์ท \033[1;33mEX: \033[1;37m80 8080"
 			echo ""
-			echo -ne "\033[1;32mINFORM THE PORTS\033[1;37m: "
+			echo -ne "\033[1;32mใส่พอร์ที่ต้องการใช้งาน\033[1;37m: "
 			read portass
 			[[ -z "$portass" ]] && {
 				echo -e "\n\033[1;31mInvalid port!"
@@ -108,10 +108,10 @@
 				verif_ptrs $porta
 			done
 			[[ $(grep -wc '14' /etc/issue.net) != '0' ]] || [[ $(grep -wc '8' /etc/issue.net) != '0' ]] && {
-				echo -e "\n\033[1;32mINSTALLING SQUID PROXY\033[0m\n"
+				echo -e "\n\033[1;32mกำลังติดตั้ง SQUID PROXY\033[0m\n"
 				fun_bar 'apt update -y' "apt install squid3 -y"
 			} || {
-				echo -e "\n\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mSQUID VERSAO 3.3.X\n\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mSQUID VERSAO 3.5.X\033[0m\n"
+				echo -e "\n\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mSQUID เวอร์ชั่น 3.3.X\n\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mSQUID เวอร์ชั่น 3.5.X\033[0m\n"
 				read -p "$(echo -e "\033[1;32mREPORT AN OPTION \033[1;37m: ")" -e -i 2 opc
 				[[ -z "$opc" ]] && {
 					echo -e "\n\033[1;31mOption invalid!"
@@ -125,7 +125,7 @@
 						fun_conexao
 					}
 				}
-				echo -e "\n\033[1;32mINSTALLING SQUID PROXY\033[0m\n"
+				echo -e "\n\033[1;32mกำลังติดตั้ง SQUID PROXY\033[0m\n"
 				fun_bar 'apt update -y' "instsqd $opc"
 			}
 			if [[ -d "/etc/squid/" ]]; then
@@ -135,7 +135,7 @@
 				var_sqd="/etc/squid3/squid.conf"
 				var_pay="/etc/squid3/payload.txt"
 			else
-				echo -e "\n\033[1;33m[\033[1;31mERRO\033[1;33m]\033[1;37m: \033[1;33mO CORRUPTED SQUID PROXY\033[0m"
+				echo -e "\n\033[1;33m[\033[1;31mผิดพลาด\033[1;33m]\033[1;37m: \033[1;33mO แพ็คเกจ SQUID PROXYเสียหาย\033[0m"
 				sleep 2
 				fun_conexao
 			fi
@@ -185,31 +185,31 @@
 					service squid3 restart
 				}
 			}
-			echo -e "\n\033[1;32mCONFIGURING SQUID PROXY\033[0m"
+			echo -e "\n\033[1;32mกำหนดค่า SQUID PROXY\033[0m"
 			echo ""
 			fun_bar 'sqd_conf'
-			echo -e "\n\033[1;32mSQUID INSTALLED SUCCESSFULLY!\033[0m"
+			echo -e "\n\033[1;32mติดตั้ง SQUID PROXY สำเร็จ!\033[0m"
 			sleep 2.5s
 			fun_conexao
 		fi
 	}
 
 	addpt_sqd() {
-		echo -e "\E[44;1;37m            ADD PORTS TO SQUID        \E[0m"
+		echo -e "\E[44;1;37m            เพิ่ม พอร์ท SQUID        \E[0m"
 		echo -e "\033[0;34m  #BY: 🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥         \E[0m"
-		echo -e "\n\033[1;33mPORTS IN USE: \033[1;32m$sqdp\n"
+		echo -e "\n\033[1;33mพอร์ทที่ใช้งาน: \033[1;32m$sqdp\n"
 		if [[ -f "/etc/squid/squid.conf" ]]; then
 			var_sqd="/etc/squid/squid.conf"
 		elif [[ -f "/etc/squid3/squid.conf" ]]; then
 			var_sqd="/etc/squid3/squid.conf"
 		else
-			echo -e "\n\033[1;31mSQUID IS NOT INSTALLED!\033[0m"
+			echo -e "\n\033[1;31mSQUID ไม่ได้ติดตั้ง!\033[0m"
 			echo -e "\n\033[1;31mReturning ...\033[0m"
 			sleep 2
 			clear
 			fun_squid
 		fi
-		echo -ne "\033[1;32mWHICH PORTS YOU WANT TO ADD \033[1;33m?\033[1;37m "
+		echo -ne "\033[1;32mต้องการเพิ่มพอร์ดได \033[1;33m?\033[1;37m "
 		read pt
 		[[ -z "$pt" ]] && {
 			echo -e "\n\033[1;31mInvalid ports!"
@@ -218,14 +218,14 @@
 			fun_conexao
 		}
 		verif_ptrs $pt
-		echo -e "\n\033[1;32mADDING PORTS TO SQUID!"
+		echo -e "\n\033[1;32mกำลังเพิ่มพอร์ท SQUID!"
 		echo ""
 		sed -i "s/#Portas/#Portas\nhttp_port $pt/g" $var_sqd
 		fun_bar 'sleep 2'
-		echo -e "\n\033[1;32mRESTARTING SQUID!"
+		echo -e "\n\033[1;32mกำลังรีสตาร์ท SQUID!"
 		echo ""
 		fun_bar 'service squid restart' 'service squid3 restart'
-		echo -e "\n\033[1;32mSUCCESSFULLY ADDED PORTS!"
+		echo -e "\n\033[1;32mเพิ่มพอร์ท สำเร็จ!"
 		sleep 3
 		clear
 		fun_squid
@@ -276,7 +276,7 @@
 
 	fun_squid() {
 		[[ "$(netstat -nplt | grep -c 'squid')" = "0" ]] && inst_sqd
-		echo -e "\E[44;1;37m          MANAGE SQUID PROXY           \E[0m"
+		echo -e "\E[44;1;37m          การจัดการ SQUID PROXY           \E[0m"
 		[[ "$(netstat -nplt | grep -c 'squid')" != "0" ]] && {
 			sqdp=$(netstat -nplt | grep 'squid' | awk -F ":" {'print $4'} | xargs)
 			echo -e "\n\033[1;33mPORTAS\033[1;37m: \033[1;32m$sqdp"
@@ -285,9 +285,9 @@
 			VarSqdOn="INSTALL SQUID PROXY"
 		}
 		echo -e "\n\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33m$VarSqdOn \033[1;31m
-[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mADD PORTS \033[1;31m
-[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mREMOVE PORTS\033[1;31m
-[\033[1;36m0\033[1;31m] \033[1;37m• \033[1;33mCOME BACK\033[0m"
+[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mเพื่มพอร์ท \033[1;31m
+[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mลบพอร์ท\033[1;31m
+[\033[1;36m0\033[1;31m] \033[1;37m• \033[1;33mย้อนกลับ\033[0m"
 		echo ""
 		echo -ne "\033[1;32mWHAT DO YOU WANT TO DO \033[1;33m?\033[1;31m?\033[1;37m "
 		read x
@@ -665,7 +665,7 @@
 				else
 					mult=$(echo -e "\033[1;31m○ ")
 				fi
-				echo -e "\E[44;1;37m          GERENCIAR OPENVPN           \E[0m"
+				echo -e "\E[44;1;37m          ตั้งค่า OPENVPN           \E[0m"
 				echo ""
 				echo -e "\033[1;33mPORTA\033[1;37m: \033[1;32m$opnp"
 				echo ""
