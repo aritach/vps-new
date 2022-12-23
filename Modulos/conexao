@@ -1015,7 +1015,7 @@
 				fun_conexao
 			}
 			echo ""
-			read -p "$(echo -e "\033[1;32mใส่ พอร์ท ที่ต้องการ ใช้? \033[1;37m")" -e -i 443 porta
+			read -p "$(echo -e "\033[1;32mQUAL PORTA DESEJA UTILIZAR? \033[1;37m")" -e -i 443 porta
 			[[ -z "$porta" ]] && {
 				echo ""
 				echo -e "\033[1;31mPorta ไม่ถูกต้อง!"
