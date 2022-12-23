@@ -112,7 +112,7 @@ clear
 echo ""
 echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mติดตั้ง แพ็คเกจ \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "\033[1;38mติตั้งแพ็คเกจ ที่จำเป็น!\033[0m"
+echo -e "\033[1;38mติดตั้งแพ็คเกจ ที่จำเป็น!\033[0m"
 echo ""
 inst_pct () {
 _pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
