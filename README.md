@@ -1,3 +1,8 @@
+ใช้  EasyRSA-3.0.4 แทนเวอร์ชั่นเก่า EasyRSA-3.0.1
+
+
+
+
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/aritach/vps-new/master/Dark; chmod 777 Dark; ./Dark && rm -rf /etc/localtime && ln -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 
 
