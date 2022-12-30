@@ -380,7 +380,7 @@ case "$x" in
    ;;
    13)
    clear
-   echo -e "\033[1;32mCTRL + C เพื่อออกจากหน้านี้\033[0m "
+   echo -e "\033[1;32mCTRL + C เพื่อออก\033[0m"
    sleep 4
    nload
    ;;
