@@ -125,7 +125,7 @@
 						fun_conexao
 					}
 				}
-				echo -e "\n\033[1;32mINSTALLING SQUID PROXY\033[0m\n"
+				echo -e "\n\033[1;32mกำลังติดตั้ง SQUID PROXY\033[0m\n"
 				fun_bar 'apt update -y' "instsqd $opc"
 			}
 			if [[ -d "/etc/squid/" ]]; then
@@ -184,10 +184,10 @@
 					service squid3 restart
 				}
 			}
-			echo -e "\n\033[1;32mCONFIGURING SQUID PROXY\033[0m"
+			echo -e "\n\033[1;32mคอนฟิก SQUID PROXY\033[0m"
 			echo ""
 			fun_bar 'sqd_conf'
-			echo -e "\n\033[1;32mSQUID INSTALLED SUCCESSFULLY!\033[0m"
+			echo -e "\n\033[1;32mติดตั้ง สำเร็จ!\033[0m"
 			sleep 2.5s
 			fun_conexao
 		fi
@@ -1214,7 +1214,7 @@ exit 0' >$RCLOCAL
 				}
 			}
 			echo ""
-			echo -e "\033[1;32mREINICIANDO O OPENVPN"
+			echo -e "\033[1;32mเริ่มต้น OPENVPN"
 			echo ""
 			fun_bar 'fun_ropen'
 			IP2=$(wget -4qO- "http://whatismyip.akamai.com/")
@@ -1248,7 +1248,7 @@ exit 0' >$RCLOCAL
 			EOF
 			# gerar client.ovpn
 			newclient "SSHPLUS"
-			[[ "$(netstat -nplt | grep -wc 'openvpn')" != '0' ]] && echo -e "\n\033[1;32mOPENVPN INSTALADO COM SUCESSO\033[0m" || echo -e "\n\033[1;31mERRO ! A INSTALACAO CORROMPEU\033[0m"
+			[[ "$(netstat -nplt | grep -wc 'openvpn')" != '0' ]] && echo -e "\n\033[1;32mติดตั้ง OPENVPN สำเร็จ\033[0m" || echo -e "\n\033[1;31mERRO ! A INSTALACAO CORROMPEU\033[0m"
 		}
 		sed -i '$ i\echo 1 > /proc/sys/net/ipv4/ip_forward' /etc/rc.local
 		sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
@@ -1727,8 +1727,8 @@ exit 0' >$RCLOCAL
 [\033[1;36m06\033[1;31m] \033[1;37m• \033[1;33mSSL TUNNEL $sts3\033[1;31m
 [\033[1;36m07\033[1;31m] \033[1;37m• \033[1;33mSSLH MULTIPLEX $sts7\033[1;31m
 [\033[1;36m08\033[1;31m] \033[1;37m• \033[1;33mSLOWDNS $sts8\033[1;31m
-[\033[1;36m09\033[1;31m] \033[1;37m• \033[1;33mVOLTAR \033[1;32m<\033[1;33m<\033[1;31m< \033[1;31m
-[\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mSAIR \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
+[\033[1;36m09\033[1;31m] \033[1;37m• \033[1;33mออกไปหน้าเมนู \033[1;32m<\033[1;33m<\033[1;31m< \033[1;31m
+[\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mย้อนกลับไปก่อนหน้า \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
 			echo ""
 			echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 			echo ""
