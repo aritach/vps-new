@@ -62,7 +62,7 @@ fun_atts () {
 
   [[ -e /tmp/att ]] && rm /tmp/att
 
-	wget -c -P /home http://darkssh.xyz/script/versao
+	wget -c -P /home https://github.com/aritach/vps-new/blob/main/Modulos/menu
 
 	[[ -f "/home/versao" ]] && mv /home/versao /tmp/att
 
@@ -132,7 +132,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
     sleep 3
 
-    wget http://darkssh.xyz/script/Dark > /dev/null 2>&1
+    wget https://github.com/aritach/vps-new/blob/main/Dark > /dev/null 2>&1
 
     chmod +x Dark
 
