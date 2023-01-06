@@ -18,8 +18,8 @@ touch $HOME/fim
  tput civis
 echo -ne "  \033[1;36mรอ \033[1;37m- \033[1;35m["
 while true; do
-   for((i=0; i<34; i++)); do
-   echo -ne "\033[1;35m🔥"
+   for((i=0; i<18; i++)); do
+   echo -ne "\033[1;35m🔥🔥"
    sleep 0.1s
    done
    [[ -e $HOME/fim ]] && rm $HOME/fim && break
