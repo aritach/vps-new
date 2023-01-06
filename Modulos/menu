@@ -71,10 +71,10 @@ down=$(cat speed | sed -n '7 p' |awk -F :  {'print $NF'})
 upl=$(cat speed | sed -n '9 p' |awk -F :  {'print $NF'})
 lnk=$(cat speed | sed -n '10 p' |awk {'print $NF'})
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\033[1;32mปิง (LATENCIA):\033[1;37m$png"
-echo -e "\033[1;32mดาวน์โหลด:\033[1;37m$down"
-echo -e "\033[1;32mอัพโหลด:\033[1;37m$upl"
-echo -e "\033[1;32mลิงค์: \033[1;36m$lnk\033[0m"
+echo -e "\033[1;32mปิง :\033[1;37m$png"
+echo -e "\033[1;32mดาวน์โหลด :\033[1;37m$down"
+echo -e "\033[1;32mอัพโหลด :\033[1;37m$upl"
+echo -e "\033[1;32mลิงค์ : \033[1;36m$lnk\033[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 rm -rf $HOME/speed
 }
