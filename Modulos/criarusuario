@@ -309,15 +309,6 @@ echo "$username $sshlimiter $password $gui" >>/home/web.db
                 echo -e "\033[1;32m♻️Paid Privet SSH ♻️"
                 echo ""
                 echo -e "\033[1;32m$banername"
-                echo -e "\033[1;32m======================"
-                echo -e "\033[1;32m=❌NO SPAM"
-                echo -e "\033[1;32m=❌NO DDOS "
-                echo -e "\033[1;32m=❌NO HACKING "
-                echo -e "\033[1;32m=❌NO CARDING   "
-                echo -e "\033[1;32m=❌NO TORRENT   "
-                echo -e "\033[1;32m=❌NO OVER DOWNLOAD"
-                echo -e "\033[1;32m=❌NO MULTILOGIN "
-                echo -e "\033[1;32m======================="
                 echo ""
 		echo -e "\n\033[1;32mᗚ IP • ๛ \033[1;37m$IP"
 		echo -e "\033[1;32mᗚ Username • ๛ \033[1;37m$username"
@@ -347,7 +338,7 @@ echo "$username $sshlimiter $password $gui" >>/home/web.db
 				tput cnorm
 			}
 			echo ""
-			echo -ne "\033[1;31mCREATING OVPN\033[1;33m.\033[1;31m. \033[1;32m"
+			echo -ne "\033[1;31mสร้างไฟล์ OVPN\033[1;33m.\033[1;31m. \033[1;32m"
 			helice
 			echo -e "\e[1DOK"
 		}
@@ -359,7 +350,7 @@ echo "$username $sshlimiter $password $gui" >>/home/web.db
 			[[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]] && {
 				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36m$IP:81/html/openvpn/$username.zip"
 			} || {
-				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36m$IP:81/openvpn/$username.zip"
+				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36mhttp://$IP:81/openvpn/$username.zip"
 			}
 		} || {
 			echo -e "\033[1;32mDisponivel em\033[1;31m" ~/"$username.zip\033[0m"
@@ -372,15 +363,6 @@ echo "$username $sshlimiter $password $gui" >>/home/web.db
 		echo -e "\033[1;32m♻️Paid Privet SSH ♻️"
                 echo ""
                 echo -e "\033[1;32m$banername"
-                echo -e "\033[1;32m======================"
-                echo -e "\033[1;32m=❌NO SPAM"
-                echo -e "\033[1;32m=❌NO DDOS "
-                echo -e "\033[1;32m=❌NO HACKING "
-                echo -e "\033[1;32m=❌NO CARDING   "
-                echo -e "\033[1;32m=❌NO TORRENT   "
-                echo -e "\033[1;32m=❌NO OVER DOWNLOAD"
-                echo -e "\033[1;32m=❌NO MULTILOGIN "
-                echo -e "\033[1;32m======================="
                 echo ""
 		echo -e "\n\033[1;32mᗚ IP • ๛ \033[1;37m$IP"
 		echo -e "\033[1;32mᗚ Username • ๛ \033[1;37m$username"
@@ -405,15 +387,6 @@ echo "$username $sshlimiter $password $gui" >>/home/web.db
 	echo -e "\033[1;32m♻️Paid Privet SSH ♻️"
         echo ""
         echo -e "\033[1;32m$banername"
-        echo -e "\033[1;32m======================"
-        echo -e "\033[1;32m=❌NO SPAM"
-        echo -e "\033[1;32m=❌NO DDOS "
-        echo -e "\033[1;32m=❌NO HACKING "
-        echo -e "\033[1;32m=❌NO CARDING   "
-        echo -e "\033[1;32m=❌NO TORRENT   "
-        echo -e "\033[1;32m=❌NO OVER DOWNLOAD"
-        echo -e "\033[1;32m=❌NO MULTILOGIN "
-        echo -e "\033[1;32m======================="
         echo ""
 	echo -e "\n\033[1;32mᗚ IP • ๛ \033[1;37m$IP"
 	echo -e "\033[1;32mᗚ Username • ๛ \033[1;37m$username"
