@@ -1003,9 +1003,9 @@
 			clear
 			echo -e "\E[44;1;37m              ตืดตั้ง OPENVPN               \E[0m"
 			echo ""
-			echo -e "\033[1;33mRESPONDA AS QUESTOES PARA INICIAR A INSTALACAO"
+			echo -e "\033[1;33mตรวจสอบการตั้งค่าต่างๆ ให้ถูกต้องก่อนยืนยัน"
 			echo ""
-			echo -ne "\033[1;32mPARA CONTINUAR CONFIRME SEU IP: \033[1;37m"
+			echo -ne "\033[1;32mCONFIRME IP: \033[1;37m"
 			read -e -i $IP IP
 			[[ -z "$IP" ]] && {
 				echo ""
@@ -1014,7 +1014,7 @@
 				fun_conexao
 			}
 			echo ""
-			read -p "$(echo -e "\033[1;32mQUAL PORTA DESEJA UTILIZAR? \033[1;37m")" -e -i 443 porta
+			read -p "$(echo -e "\033[1;32mSELECT PORT? \033[1;37m")" -e -i 443 porta
 			[[ -z "$porta" ]] && {
 				echo ""
 				echo -e "\033[1;31mPorta invalida!"
@@ -1033,12 +1033,12 @@
 			echo -e "\033[1;31m[\033[1;36m6\033[1;31m] \033[1;33mVerisign"
 			echo -e "\033[1;31m[\033[1;36m7\033[1;31m] \033[1;33mDNS Performace\033[0m"
 			echo ""
-			read -p "$(echo -e "\033[1;32mQUAL DNS DESEJA UTILIZAR? \033[1;37m")" -e -i 1 DNS
+			read -p "$(echo -e "\033[1;32mSELECT DNS? \033[1;37m")" -e -i 1 DNS
 			echo ""
 			echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;33mUDP"
 			echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;33mTCP"
 			echo ""
-			read -p "$(echo -e "\033[1;32mQUAL PROTOCOLO DESEJA UTILIZAR NO OPENVPN? \033[1;37m")" -e -i 2 resp
+			read -p "$(echo -e "\033[1;32mSELECT PROTOCOL? \033[1;37m")" -e -i 2 resp
 			if [[ "$resp" = '1' ]]; then
 				PROTOCOL=udp
 			elif [[ "$resp" = '2' ]]; then
