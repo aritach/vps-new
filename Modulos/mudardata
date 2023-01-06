@@ -1,5 +1,5 @@
 #!/bin/bash
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%33s%s%-12s\n' "change expiry date" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%33s%s%-12s\n' "เปลี่ยน วันหม่ดอายุ!" ; tput sgr0
 echo ""
 echo -e "\033[1;33m User list and expiration date:\033[0m "
 echo ""
