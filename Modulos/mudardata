@@ -30,7 +30,7 @@ while read user; do
 		else
 			_user=$(echo -e "\033[1;31m[\033[1;32m$i\033[1;31m] \033[1;37m- \033[1;36m$user\033[1;37m")
 			datanormal="$(echo -e "\033[1;37m$(date -d"$expire" '+%d/%m/%Y')")"
-			ative=$(echo -e "\033[1;32mใช้งานได้!\033[0m")
+			ative=$(echo -e "\033[1;32mปกติ!\033[0m")
 			printf '%-62s%-20s%s\n' "$_user" "$datanormal" "$ative"
 		fi
 	fi
