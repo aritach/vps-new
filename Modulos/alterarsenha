@@ -124,5 +124,3 @@ else
 		fi
 	else
 		tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "The user $user does not exist!" ; echo "" ; tput sgr0
-	fi
-fi
