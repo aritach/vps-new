@@ -1,14 +1,7 @@
 #!/bin/bash
-#====================================================
-#	SCRIPT: CONEXAO DARKSSH MANAGER
-#   DATA ATT:   28 de Set 2020
-#	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/darkssh
-#====================================================
 _lvk=$(wget -qO- https://raw.githubusercontent.com/aritach/vps-new/master/Install/versao)
-IP=$(wget -qO- darkssh.xyz/meuip.php)
-IP2=$(wget -qO- http://whatismyip.akamai.com/)
+IP=$(wget -qO- http://whatismyip.akamai.com/)
+IP2=$(wget -qO- darkssh.xyz/meuip.php)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
 echo -e "$ipdovps" >/etc/IP
 lst=$1 && lst1=$2 && lst2=$3 && key1=$4 && key2=crz
