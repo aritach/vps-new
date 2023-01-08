@@ -41,7 +41,7 @@ echo -e "\033[1;32m            ลบแพ็คเกจ ที่ไม่จ
 echo ""
 fun_bar 'apt-get autoremove -y' 'apt-get autoclean -y'
 echo ""
-echo -e "\033[1;32m          ลบแพ็คเกจ ที่มีปัญหา
+echo -e "\033[1;32m          ลบแพ็คเกจ ที่มีปัญหา!"
 echo ""
 fun_bar 'apt-get -f remove -y' 'apt-get clean -y'
 #Limpar o cache memoria RAM
