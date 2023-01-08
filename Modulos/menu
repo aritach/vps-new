@@ -340,16 +340,11 @@ case "$x" in
    clear
    delscript
    ;;
-   0)
+   00)
    echo -e "\033[1;33mกำลังออกจากเมนู...\033[0m"
    sleep 2
    clear
    exit;
-   ;;
-   29)
-   clear
-   sleep 2
-   logout
    ;;
    *)
    echo -e "\n\033[1;31mเลือกเมนู ไม่ถูกต้อง!\033[0m"
