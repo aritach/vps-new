@@ -120,9 +120,9 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
   echo " "
 
-  echo -ne "  \033[1;32mUPDATE script\033[1;31m? \033[1;33m[s/n]:\033[1;37m " -e -i s resp
+  echo -ne "  \033[1;32mUPDATE script\033[1;31m? \033[1;33m[s/n]:\033[1;37m "; read res
 
-  if [[ "$resp" = s || "$resp" = S ]];then
+  if [[ "$res" = s || "$res" = S ]];then
 
     echo -e "\n\033[1;32m  เริ่มต้น การอัพเดท ..."
 
