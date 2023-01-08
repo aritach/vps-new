@@ -76,7 +76,7 @@ echo ""
 	echo -e "of Simultaneous Connections of Users? Or Do You Want"
     echo -e "create a new database?\033[0m"
 	echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mฐานข้อมูลเดิม\033[0m"
-	echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mสร้างฐานข้อมูลใหม่\033[0m"
+	echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mสร้างฐานข้อมูลใหม่\033[0m "
 	echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
     echo ""
 	tput setaf 2 ; tput bold ; read -p "Option?: " -e -i 1 optiondb ; tput sgr0
