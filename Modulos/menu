@@ -346,7 +346,7 @@ case "$x" in
    clear
    exit;
    ;;
-   00)
+   29)
    clear
    sleep 2
    loguot
