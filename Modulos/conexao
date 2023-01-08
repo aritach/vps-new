@@ -680,12 +680,12 @@
 				echo -e "\033[1;31m[\033[1;32m5\033[1;31m] \033[1;37m• \033[1;36mALTERAR HOST DNS"
 				echo -e "\033[1;31m[\033[1;32m0\033[1;31m] \033[1;37m• \033[1;36mย้อนกลับ"
 				echo ""
-				echo -ne "\033[1;32mOQUE DESEJA FAZER \033[1;33m?\033[1;31m?\033[1;37m "
+				echo -ne "\033[1;32mSELECT MENU \033[1;33m?\033[1;31m?\033[1;37m "
 				read option
 				case $option in
 				1)
 					clear
-					echo -e "\E[44;1;37m         ALTERAR PORTA OPENVPN         \E[0m"
+					echo -e "\E[44;1;37m         เพิ่ม พอร์ท OPENVPN         \E[0m"
 					echo ""
 					echo -e "\033[1;33mPORTA EM USO: \033[1;32m$opnp"
 					echo ""
@@ -718,7 +718,7 @@
 					;;
 				2)
 					echo ""
-					echo -ne "\033[1;32mDESEJA REMOVER O OPENVPN \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
+					echo -ne "\033[1;32m REMOVER O OPENVPN \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
 					read REMOVE
 					[[ "$REMOVE" = 's' ]] && {
 						rmv_open() {
@@ -908,7 +908,7 @@
 					read resp
 					[[ -z "$resp" ]] && {
 						echo ""
-						echo -e "\033[1;31mOpcao invalida!"
+						echo -e "\033[1;31mเลือกเมนู ไม่ถูกต้อง!"
 						sleep 3
 						fun_openvpn
 					}
