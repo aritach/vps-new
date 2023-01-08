@@ -28,7 +28,7 @@ while true; do
 
    for((i=0; i<18; i++)); do
 
-   echo -ne "\033[1;35m$"
+   echo -ne "\033[1;35m🔥"
 
    sleep 0.1s
 
