@@ -140,7 +140,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
     rm /tmp/att > /dev/null 2>&1
 
-    echo -ne "\033[1;31mENTER \033[1;33mto return to\033[1;32mMENU!\033[0m"; read
+    echo -ne "\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
 
     menu
 
