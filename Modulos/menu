@@ -349,7 +349,8 @@ case "$x" in
    *)
    echo -e "\n\033[1;31mเลือกเมนู ไม่ถูกต้อง!\033[0m"
    sleep 2
-   
 esac
 done
+}
+menu
 #fim
