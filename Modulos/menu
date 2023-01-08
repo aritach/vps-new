@@ -346,11 +346,11 @@ case "$x" in
    clear
    exit;
    ;;
-   29)
-   echo -e "\033[1;33mexit...\033[0m"
+   0)
+   echo -e "\033[1;33mlogout...\033[0m"
    sleep 2
    clear
-   ^C;
+   logout;
    ;;
    *)
    echo -e "\n\033[1;31mเลือกเมนู ไม่ถูกต้อง!\033[0m"
