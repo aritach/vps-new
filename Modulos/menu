@@ -128,7 +128,7 @@ function autoexec () {
       echo ""
       echo -e "\033[1;31mปิดแล้ว!\033[0m"
       sleep 1.5s
-      menu2
+      menu
    else
       clear
       echo -e "\033[1;32mเปิดเมนูอัตโนมัตเมื่อล็อกอิน\033[0m"
@@ -141,7 +141,7 @@ function autoexec () {
       echo ""
       echo -e "\033[1;32mเปิดแล้ว!\033[0m"
       sleep 1.5s
-      menu2
+      menu
    fi
 }
 while true $x != "ok"
@@ -302,13 +302,11 @@ case "$x" in
    clear
    addhost
    echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
-   menu2
    ;;
    20)
    clear
    delhost
    echo -ne "\n\033[1;31mENTER \033[1;33mවto return to \033[1;32mMENU!\033[0m"; read
-   menu2
    ;;
    21)
    clear
