@@ -349,7 +349,7 @@ case "$x" in
    29)
    clear
    sleep 2
-   loguot
+   logout
    ;;
    *)
    echo -e "\n\033[1;31mเลือกเมนู ไม่ถูกต้อง!\033[0m"
