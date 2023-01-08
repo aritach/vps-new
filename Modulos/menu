@@ -346,6 +346,12 @@ case "$x" in
    clear
    exit;
    ;;
+   29)
+   echo -e "\033[1;33mewxit...\033[0m"
+   sleep 2
+   clear
+   Ctrl+c;
+   ;;
    *)
    echo -e "\n\033[1;31mเลือกเมนู ไม่ถูกต้อง!\033[0m"
    sleep 2
