@@ -327,7 +327,6 @@
 				stats='\033[1;31m○ '
 			fi
 			echo -e "\E[44;1;37m              MANAGE DROPBEAR              \E[0m"
-			echo -e "\033[0;34m  #BY: 🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥         \E[0m"
 			echo -e "\n\033[1;33mPORTS\033[1;37m: \033[1;32m$dpbr"
 			echo ""
 			echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mDROPBEAR LIMITER $stats\033[0m"
@@ -405,7 +404,6 @@
 		else
 			clear
 			echo -e "\E[44;1;37m          DROPBEAR INSTALLER              \E[0m"
-			echo -e "\033[0;34m #BY:🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥         \E[0m"
 			echo -e "\n\033[1;33mYOU ARE ABOUT TO INSTALL DROPBEAR!\033[0m\n"
 			echo -ne "\033[1;32mDO YOU WISH TO CONTINUE \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
 			read resposta
@@ -468,7 +466,6 @@
 		if netstat -nltp | grep 'stunnel4' 1>/dev/null 2>/dev/null; then
 			[[ $(netstat -nltp | grep 'stunnel4' | wc -l) != '0' ]] && sslt=$(netstat -nplt | grep stunnel4 | awk {'print $4'} | awk -F ":" {'print $2'} | xargs) || sslt="\033[1;31mINDISPONIVEL"
 			echo -e "\E[44;1;37m              MANAGE SSL TUNNEL               \E[0m"
-			echo -e "\033[0;34m  #BY:  🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥         \E[0m"
 			echo -e "\n\033[1;33mPORTAS\033[1;37m: \033[1;32m$sslt"
 			echo ""
 			echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mCHANGE SSL TUNNEL PORT\033[0m"
@@ -1660,9 +1657,9 @@ exit 0' >$RCLOCAL
 					apt-get remove sslh -y
 					apt-get purge sslh -y
 				}
-				echo -e "\n\033[1;32mREMOVENDO O SSLH !\033[0m\n"
+				echo -e "\n\033[1;32mREMOVE O SSLH !\033[0m\n"
 				fun_bar 'fun_delsslh'
-				echo -e "\n\033[1;32mREMOVIDO COM SUCESSO !\033[0m\n"
+				echo -e "\n\033[1;32mREMOVe COM SUCCESS !\033[0m\n"
 				sleep 2
 				fun_conexao
 			} || {
