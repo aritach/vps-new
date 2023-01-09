@@ -85,7 +85,7 @@
 		else
 			clear
 			echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-			echo -e "\E[44;1;37m              ติดตั้ง SQID PROXY               \E[0m"
+			echo -e "\E[44;1;37m             ติดตั้ง SQID PROXY            \E[0m"
 			echo -e "\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 			echo ""
 			IP=$(wget -qO- ipv4.icanhazip.com)
@@ -196,7 +196,7 @@
 
 	addpt_sqd() {
 	        echo -e "\033[1;35m══════════════════════════════════════\033[0m"
-		echo -e "\E[44;1;37m            เพิ่มพอร์ท SQUID        \E[0m"
+		echo -e "\E[44;1;37m             เพิ่มพอร์ท SQUID          \E[0m"
 		echo -e "\033[1;35m══════════════════════════════════════\033[0m"
 		echo -e "\n\033[1;33mPORTS IN USE: \033[1;32m$sqdp\n"
 		if [[ -f "/etc/squid/squid.conf" ]]; then
@@ -234,7 +234,7 @@
 
 	rempt_sqd() {
 	        echo -e "\033[1;35m═════════════════════════════════════════\033[0m"
-		echo -e "\E[41;1;37m          REMOVE SQUID PORTS       \E[0m"
+		echo -e "\E[41;1;37m            REMOVE SQUID PORTS           \E[0m"
 		echo -e "\033[1;35m═════════════════════════════════════════\033[0m"
 		echo -e "\n\033[1;33mPORTAS EM USO: \033[1;32m$sqdp\n"
 		if [[ -f "/etc/squid/squid.conf" ]]; then
@@ -668,15 +668,15 @@
 					mult=$(echo -e "\033[1;31m○ ")
 				fi
 				echo -e "\033[1;35m══════════════════════════════════════════\033[0m"
-				echo -e "\E[44;1;37m          ตั้งค่า OPENVPN           \E[0m"
+				echo -e "\E[44;1;37m              ตั้งค่า OPENVPN               \E[0m"
 				echo -e "\033[1;35m══════════════════════════════════════════\033[0m"
 				echo ""
-				echo -e "\033[1;33mPORTA\033[1;37m: \033[1;32m$opnp"
+				echo -e "    \033[1;33mพอร์ทที่ใช้งาน\033[1;37m: \033[1;32m$opnp"
 				echo ""
-				echo -e "\033[1;31m[\033[1;32m1\033[1;31m] \033[1;37m• \033[1;36mตั้งค่าพอร์ท"
+				echo -e "\033[1;31m[\033[1;32m1\033[1;31m] \033[1;37m• \033[1;36mเปลียนพอร์ท"
 				echo -e "\033[1;31m[\033[1;32m2\033[1;31m] \033[1;37m• \033[1;36mลบ OPENVPN"
 				echo -e "\033[1;31m[\033[1;32m3\033[1;31m] \033[1;37m• \033[1;36mสร้างลิงค์ดาวโหลดไฟล์ ovpn $ovpnweb"
-				echo -e "\033[1;31m[\033[1;32m4\033[1;31m] \033[1;37m• \033[1;36mเชือมต่อได้หลายเครื่อง $mult"
+				echo -e "\033[1;31m[\033[1;32m4\033[1;31m] \033[1;37m• \033[1;36mเปิด-ปิด เชือมต่อได้หลายเครื่อง $mult"
 				echo -e "\033[1;31m[\033[1;32m5\033[1;31m] \033[1;37m• \033[1;36mALTERAR HOST DNS"
 				echo -e "\033[1;31m[\033[1;32m0\033[1;31m] \033[1;37m• \033[1;36mย้อนกลับ"
 				echo ""
@@ -685,21 +685,21 @@
 				case $option in
 				1)
 					clear
-					echo -e "\E[44;1;37m         เพิ่ม พอร์ท OPENVPN         \E[0m"
+					echo -e "\E[44;1;37m         เปลี่ยน พอร์ท OPENVPN         \E[0m"
 					echo ""
-					echo -e "\033[1;33mPORTA EM USO: \033[1;32m$opnp"
+					echo -e "\033[1;33mพอร์ทที่ใช้อยู่: \033[1;32m$opnp"
 					echo ""
-					echo -ne "\033[1;32mSELECT MENU \033[1;33m?\033[1;37m "
+					echo -ne "  \033[1;32mSELET Port new \033[1;33m?\033[1;37m "
 					read porta
 					[[ -z "$porta" ]] && {
 						echo ""
-						echo -e "\033[1;31mPorta invalida!"
+						echo -e "\033[1;31mใส่พอร์ท ไม่ถูกต้อง!"
 						sleep 3
 						fun_conexao
 					}
 					verif_ptrs
 					echo ""
-					echo -e "\033[1;32mALTERANDO A PORTA OPENVPN!\033[1;33m"
+					echo -e "\033[1;32mเปลี่ยนพอร์ท OPENVPN!\033[1;33m"
 					echo ""
 					fun_opn() {
 						var_ptovpn=$(sed -n '1 p' /etc/openvpn/server.conf)
@@ -718,7 +718,7 @@
 					;;
 				2)
 					echo ""
-					echo -ne "\033[1;32m REMOVER O OPENVPN \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
+					echo -ne "\033[1;32m ลบ OPENVPN \033[1;31m? \033[1;33m[s/n]:\033[1;37m "
 					read REMOVE
 					[[ "$REMOVE" = 's' ]] && {
 						rmv_open() {
@@ -768,7 +768,7 @@
 						fun_conexao
 					} || {
 						echo ""
-						echo -e "\033[1;31mRetornando...\033[0m"
+						echo -e "\033[1;31mกำลังย้อนกลับ...\033[0m"
 						sleep 2
 						fun_conexao
 					}
@@ -1007,7 +1007,7 @@
 		} || {
 			clear
 			echo -e "\033[1;35m══════════════════════════════════════════\033[0m"
-			echo -e "\E[44;1;37m              ตืดตั้ง OPENVPN               \E[0m"
+			echo -e "\E[44;1;37m              ติดตั้ง OPENVPN               \E[0m"
 			echo -e "\033[1;35m══════════════════════════════════════════\033[0m"
 			echo ""
 			echo -e "\033[1;33mตรวจสอบการตั้งค่าต่างๆ ให้ถูกต้องก่อนยืนยัน"
@@ -1016,7 +1016,7 @@
 			read -e -i $IP IP
 			[[ -z "$IP" ]] && {
 				echo ""
-				echo -e "\033[1;31mIP invalido!"
+				echo -e "\033[1;31mIP ไม่ถูกต้อง!"
 				sleep 3
 				fun_conexao
 			}
@@ -1024,7 +1024,7 @@
 			read -p "$(echo -e "\033[1;32mSELECT PORT? \033[1;37m")" -e -i 443 porta
 			[[ -z "$porta" ]] && {
 				echo ""
-				echo -e "\033[1;31mPorta invalida!"
+				echo -e "\033[1;31mพอร์ท ไม่ถูกต้อง!"
 				sleep 2
 				fun_conexao
 			}
@@ -1045,7 +1045,7 @@
 			echo -e "\033[1;31m[\033[1;32m1\033[1;31m] \033[1;36mUDP"
 			echo -e "\033[1;31m[\033[1;32m2\033[1;31m] \033[1;36mTCP"
 			echo ""
-			read -p "$(echo -e "\033[1;32mSELECT PROTOCOL? \033[1;37m")" -e -i 2 resp
+			read -p "$(echo -e "\033[1;32mSELECT PROTOCOL \033[1;37m")" -e -i 2 resp
 			if [[ "$resp" = '1' ]]; then
 				PROTOCOL=udp
 			elif [[ "$resp" = '2' ]]; then
@@ -1766,7 +1766,7 @@ exit 0' >$RCLOCAL
 			7 | 07)
 				fun_sslh
 				;;
-		    8 | 08)
+		        8 | 08)
 				slow_dns
 				;;
 			9 | 09)
