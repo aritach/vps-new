@@ -1197,7 +1197,7 @@ exit 0' >$RCLOCAL
 					fi
 				fi
 			}
-			echo -e "\033[1;32mกำลังติดตั้ง OPENVPN  \033[1;31m(\033[1;33mรอ สักครู่!\033[1;31m)"
+			echo -e "\033[1;32mกำลังติดตั้ง OPENVPN"
 			echo ""
 			fun_bar 'fun_dep > /dev/null 2>&1'
 			fun_ropen() {
