@@ -70,9 +70,7 @@ fun_atts () {
 
 } > /dev/null 2>&1
 
-echo -e "                 \033[1;31mBy 🔥⚡️⚡️ BALL SCRIPT ⚡️⚡️🔥\033[1;36m"
-
-echo -e "   BALL SCRIPT" | figlet
+echo -e "     \033[1;31mBy 🔥⚡️⚡️ BALL SCRIPT ⚡️⚡️🔥\033[1;36m" | figlet
 
 echo " "
 
