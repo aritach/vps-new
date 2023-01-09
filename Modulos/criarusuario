@@ -207,7 +207,7 @@ fun_edithost() {
 tput setaf 7;tput setab 4;tput bold;printf '%30s%s%-15s\n' "           สร้างบัญชี OPENVPN";tput sgr0
 echo ""
 echo -e "\033[1;34m========================================="
-echo -e "\033[1;35m      #### \033[1;33mสร้างผู่ใช้ OPENVPN \033[1;35m####\E[0m"
+echo -e "\033[1;35m      #### \033[1;33mสร้างผู้ใช้ OPENVPN \033[1;35m####\E[0m"
 echo -e "\033[1;34m========================================="
 echo ""
 echo -ne "\033[1;36mUsername:\033[1;37m ";read username
