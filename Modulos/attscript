@@ -126,7 +126,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
     sleep 3
 
-    wget https://raw.githubusercontent.com/aritach/vps-new/main/Dark > /dev/null 2>&1
+    wget https://github.com/aritach/vps-new/blob/main/Dark > /dev/null 2>&1
 
     chmod +x Dark
 
