@@ -13,7 +13,7 @@ touch $HOME/fim
 echo -ne "\033[1;33m["
 while true; do
    for((i=0; i<18; i++)); do
-   echo -ne "\033[1;35m<=>"
+   echo -ne "\033[1;35m🔥"
    sleep 0.1s
    done
    [[ -e $HOME/fim ]] && rm $HOME/fim && break
@@ -53,7 +53,7 @@ while true; do
    sleep 1s
    tput cuu1
    tput dl1
-   echo -ne "  \033[1;36mรอ \033[1;37m- \033[1;35m["
+   echo -ne "  \033[1;36mกำลังทดสอบ \033[1;37m- \033[1;35m["
 done
 echo -e "\033[1;35m]\033[1;37m -\033[1;32m OK !\033[1;37m"
 tput cnorm
@@ -62,7 +62,7 @@ fun_tst () {
 speedtest --share > speed
 }
 echo ""
-echo -e "   \033[1;32mกำลังทดสอบความเร็วเซิฟเวอร์!\033[0m"
+echo -e "    \033[1;32mทดสอบความเร็วเซิฟเวอร์!\033[0m"
 echo ""
 aguarde 'fun_tst'
 echo ""
