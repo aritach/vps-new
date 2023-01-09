@@ -343,7 +343,7 @@ echo "$username $sshlimiter $password $gui" >>/home/web.db
 			[[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]] && {
 				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36m$IP:81/html/openvpn/$username.zip"
 			} || {
-				echo -e "      \033[1;32mดาวโหลด ลิงค์\033[1;37m: \033[1;36mhttp://$IP:81/openvpn/$username.zip"
+				echo -e "      \033[1;32mดาวโหลด ลิงค์+\033[1;37m: \033[1;36mhttp://$IP:81/openvpn/$username.zip"
 			}
 		} || {
 			echo -e "\033[1;32mDisponivel em\033[1;31m" ~/"$username.zip\033[0m"
