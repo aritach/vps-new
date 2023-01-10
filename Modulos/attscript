@@ -65,7 +65,7 @@ tput cnorm
 
   if [[ "$res" = s || "$res" = S ]];then
     echo ""
-    echo -e "  \033[1;32m◇ เริ่มต้นการอัพเดท..."
+    echo -e "  \033[1;33m◇ เริ่มต้นการอัพเดท..."
 
     sleep 3
 
