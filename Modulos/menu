@@ -143,6 +143,7 @@ function autoexec () {
       sleep 1.5s
       menu
    fi
+   
 }
 #menu2
 menu2 (){
@@ -260,7 +261,6 @@ case "$x" in
    echo -e "\n\033[1;31mOption invalid!\033[0m"
    sleep 2
 esac
-
 }
 while true $x != "ok"
 do
@@ -465,7 +465,7 @@ case "$x" in
    clear
    delscript
    ;;
-   0 | 00)
+   0|00)
    echo -e "\033[1;33mกำลังออกจากเมนู...\033[0m"
    sleep 2
    clear
