@@ -1,6 +1,6 @@
 #!/bin/bash
 echo ""
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-10s\n' "     เปลี่ยน รหัสผ่าน" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-10s\n' "        เปลี่ยน รหัสผ่าน" ; tput sgr0
 echo ""
 echo -e "   \033[1;33mรายชื่่อผู้ใช้งาน ที่จะเปลี่ยนรหัสผ่าน: \033[0m"
 echo""
