@@ -145,7 +145,7 @@ function autoexec () {
    fi
    
 }
-menu (){
+
 while true $x != "ok"
 do
 [[ -e /etc/Dark-torrent ]] && stsf=$(echo -e "\033[1;32m◉ ") || stsf=$(echo -e "\033[1;31m○ ")
