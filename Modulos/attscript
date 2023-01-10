@@ -58,7 +58,7 @@ tput cnorm
   echo " "
   
   echo -e "\033[1;32m********************************************\033[0m"
-  echo -e "         \033[1;32mอัพเดท เมนูสคริป และ ระบบต่างๆ\033[0m
+  echo -e "         \033[1;32mอัพเดท เมนูสคริป และ ระบบต่างๆ\033[0m"
   echo -e "\033[1;32m********************************************\033[0m"
   
 
@@ -70,7 +70,7 @@ tput cnorm
 
     sleep 3
 
-    wget https://raw.githubusercontent.com/aritach/vps-new/master/Dark
+    wget https://raw.githubusercontent.com/aritach/vps-new/master/Dark > /dev/null 2>&1
     
     chmod 777 Dark
     
