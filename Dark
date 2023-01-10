@@ -55,7 +55,6 @@ echo -e "\n\033[1;36mเช็คระบบ \033[1;31m(\033[1;36mแนะน�
 sleep 3s
 echo "/bin/menu" > /bin/h && chmod +x /bin/h > /dev/null 2>&1
 echo "apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/aritach/vps-new/master/Dark; chmod 777 Dark; ./Dark" > /bin/darkssh && chmod +x /bin/darkssh > /dev/null 2>&1
-wget -O /bin/menuV1 https://raw.githubusercontent.com/aritach/vps-new/master/Modulos/menuV1 > /dev/null 2>&1; chmod +x /bin/menuV1
 rm versao* > /dev/null 2>&1; wget https://raw.githubusercontent.com/aritach/vps-new/master/versao > /dev/null 2>&1
 #-----------------------------------------------------------------------------------------------------------------
 echo -e "\n\033[1;32mKEY ถูกต้อง!\033[1;32m"
