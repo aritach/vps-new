@@ -70,7 +70,7 @@ tput cnorm
 
     sleep 3
 
-    wget https://raw.githubusercontent.com/aritach/vps-new/master/Dark > /dev/null 2>&1
+    wget https://raw.githubusercontent.com/aritach/vps-new/master/Dark
     
     chmod 777 Dark
     
