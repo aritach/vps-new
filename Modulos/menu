@@ -119,19 +119,19 @@ function limit_ssh () {
 function autoexec () {
    if grep "menu;" /etc/profile > /dev/null; then
       clear
-      echo -e "\033[1;32mปิดการเปิดเมนูอัตโนมัต\033[0m"
+      echo -e "    \033[1;32mปิดการเปิดเมนูอัตโนมัต\033[0m"
       offautmenu () {
          sed -i '/menu;/d' /etc/profile
       }
       echo ""
       fun_bar 'offautmenu'
       echo ""
-      echo -e "\033[1;31mปิดแล้ว!\033[0m"
+      echo -e "    \033[1;31mปิดแล้ว!\033[0m"
       sleep 1.5s
       menu
    else
       clear
-      echo -e "\033[1;32mเปิดเมนูอัตโนมัตเมื่อล็อกอิน\033[0m"
+      echo -e "    \033[1;32mเปิดเมนูอัตโนมัตเมื่อล็อกอิน\033[0m"
       autmenu () {
          grep -v "^menu;" /etc/profile > /tmp/tmpass && mv /tmp/tmpass /etc/profile
          echo "menu;" >> /etc/profile
@@ -139,7 +139,7 @@ function autoexec () {
       echo ""
       fun_bar 'autmenu'
       echo ""
-      echo -e "\033[1;32mเปิดแล้ว!\033[0m"
+      echo -e "    \033[1;32mเปิดแล้ว!\033[0m"
       sleep 1.5s
       menu
    fi
