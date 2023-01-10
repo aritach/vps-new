@@ -54,17 +54,6 @@ tput cnorm
 
 }
 
-echo " "
-
-  echo -e "  \033[1;36m◇ THERE IS A NEW UPDATE AVAILABLE!\033[1;33m\n"
-
-  echo -e "  \033[1;32m◇ UPDATE DETAILS:\033[0m\n"
-
-  while read linha; do
-
-    echo -e "  \033[1;37m- \033[1;33m$linha"
-
-  done < "/tmp/att"
 
   echo " "
 
@@ -76,7 +65,11 @@ echo " "
 
     sleep 3
 
-    wget https://raw.githubusercontent.com/aritach/vps-new/master/Dark; chmod 777 Dark; ./Dark 
+    wget https://raw.githubusercontent.com/aritach/vps-new/master/Dark > /dev/null 2>&1
+    
+    chmod 777 Dark
+    
+    ./Dark 
 
     clear
 
