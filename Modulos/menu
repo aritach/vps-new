@@ -387,26 +387,21 @@ case "$x" in
    conexao
    exit;
    ;;
-   24)
+   11)
+   botssh
+   ;;
+   12)
    clear
-   velocity
+   addhost
    echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
    ;;
-   18)
+   13)
    clear
-   banner
-   sleep 3
+   delhost
+   echo -ne "\n\033[1;31mENTER \033[1;33mවto return to \033[1;32mMENU!\033[0m"; read
    ;;
-   19)
-   clear
-   echo -e "\033[1;32mCTRL + C เพื่อออก\033[0m"
-   sleep 4
-   nload
-   ;;
-   23)
-   clear
-   otimizar
-   echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
+   14)
+   blockt
    ;;
    15)
    userbackup
@@ -420,19 +415,20 @@ case "$x" in
    badvpn
    exit;
    ;;
+   18)
+   clear
+   banner
+   sleep 3
+   ;;
+   19)
+   clear
+   echo -e "\033[1;32mCTRL + C เพื่อออก\033[0m"
+   sleep 4
+   nload
+   ;;
    20)
    clear
    detalhes
-   echo -ne "\n\033[1;31mENTER \033[1;33mවto return to \033[1;32mMENU!\033[0m"; read
-   ;;
-   12)
-   clear
-   addhost
-   echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
-   ;;
-   13)
-   clear
-   delhost
    echo -ne "\n\033[1;31mENTER \033[1;33mවto return to \033[1;32mMENU!\033[0m"; read
    ;;
    21)
@@ -444,11 +440,15 @@ case "$x" in
    reiniciarservicos
    sleep 3
    ;;
-   14)
-   blockt
+   23)
+   clear
+   otimizar
+   echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
    ;;
-   11)
-   botssh
+   24)
+   clear
+   velocity
+   echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
    ;;
    25)
    clear
@@ -465,7 +465,7 @@ case "$x" in
    clear
    delscript
    ;;
-   0|00)
+   0 | 00)
    echo -e "\033[1;33mกำลังออกจากเมนู...\033[0m"
    sleep 2
    clear
