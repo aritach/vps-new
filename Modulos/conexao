@@ -1240,6 +1240,7 @@ exit 0' >$RCLOCAL
 				http-proxy $IP 8080
 				remote 127.0.0.1
 				http-proxy-option CUSTOM-HEADER Host www.opensignal.com
+				route $IP 255.255.255.255 net_gateway
 				connect-retry 1
 				connect-timeout 120
 				resolv-retry 5
